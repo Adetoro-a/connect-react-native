@@ -34,13 +34,13 @@ function MonoProvider(props: MonoProviderProps) {
   }
 
   if (reauthToken){
-    payload['reauth_token']= reauthToken
+    payload['reauth_token'] = reauthToken
   }
 
   return (
     <MonoContext.Provider value={{init, reauthorise, scope: props?.scope}}>
       <MonoConnect {...payload} />
-        {props.children}
+      {props.children}
     </MonoContext.Provider>
   )
 }
